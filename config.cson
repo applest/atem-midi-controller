@@ -1,0 +1,129 @@
+atem:
+  host: "172.16.0.101"
+
+knobs: [
+    mode: "audioPan"
+    atemInput: 1
+    padAssign: 49
+  ,
+    mode: "audioPan"
+    atemInput: 2
+    padAssign: 50
+  ,
+    mode: "audioPan"
+    atemInput: 3
+    padAssign: 51
+  ,
+    mode: "audioPan"
+    atemInput: 4
+    padAssign: 52
+]
+
+sliders: [
+    mode: "audioGain"
+    atemInput: 1
+    padAssign: 77
+  ,
+    mode: "audioGain"
+    atemInput: 2
+    padAssign: 78
+  ,
+    mode: "audioGain"
+    atemInput: 3
+    padAssign: 79
+  ,
+    mode: "audioGain"
+    atemInput: 4
+    padAssign: 80
+  ,
+
+    mode: "audioGain"
+    atemInput: 1201
+    padAssign: 81
+  ,
+    mode: "audioGain"
+    atemInput: 1001
+    padAssign: 82
+  ,
+    mode: "audioMasterGain"
+    padAssign: 83
+  ,
+    mode: "tbar"
+    padAssign: 84
+]
+
+buttons: [
+    mode: "audioOn"
+    atemInput: 1
+    padAssign: 41
+  ,
+    mode: "audioOn"
+    atemInput: 2
+    padAssign: 42
+  ,
+    mode: "audioOn"
+    atemInput: 3
+    padAssign: 43
+  ,
+    mode: "audioOn"
+    atemInput: 4
+    padAssign: 44
+  ,
+
+    mode: "previewAndProgram"
+    atemInput: 1
+    padAssign: 57
+  ,
+    mode: "previewAndProgram"
+    atemInput: 2
+    padAssign: 58
+  ,
+    mode: "previewAndProgram"
+    atemInput: 3
+    padAssign: 59
+  ,
+    mode: "previewAndProgram"
+    atemInput: 4
+    padAssign: 60
+  ,
+
+    mode: "preview"
+    atemInput: 1
+    padAssign: 73
+  ,
+    mode: "preview"
+    atemInput: 2
+    padAssign: 74
+  ,
+    mode: "preview"
+    atemInput: 3
+    padAssign: 75
+  ,
+    mode: "preview"
+    atemInput: 4
+    padAssign: 76
+  ,
+
+    mode: "program"
+    atemInput: 1
+    padAssign: 89
+  ,
+    mode: "program"
+    atemInput: 2
+    padAssign: 90
+  ,
+    mode: "program"
+    atemInput: 3
+    padAssign: 91
+  ,
+    mode: "program"
+    atemInput: 4
+    padAssign: 92
+  ,
+
+    mode: "auto"
+    padAssign: 107
+  ,
+    mode: "cut"
+    padAssign: 108
+]

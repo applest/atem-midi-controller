@@ -1,0 +1,87 @@
+"atem": {
+  "host": "172.16.0.101"
+}
+"sliders": [
+  { mode: "audioGain"
+    atem_input: 1
+    pad_assign: 73 }
+  { mode: "audioGain"
+    atem_input: 2
+    pad_assign: 74 }
+  { mode: "audioGain"
+    atem_input: 3
+    pad_assign: 75 }
+  { mode: "audioGain"
+    atem_input: 4
+    pad_assign: 76 }
+
+  { mode: "audioGain"
+    atem_input: 1001
+    pad_assign: 89 }
+  { mode: "audioGain"
+    atem_input: 1201
+    pad_assign: 90 }
+  { mode: "audioMasterGain"
+    pad_assign: 91 }
+  { mode: "tbar"
+    atem_input: 0
+    pad_assign: 92 }
+]
+"buttons": [
+  { mode: "audioOn"
+    atem_input: 1
+    pad_assign: 41 }
+  { mode: "audioOn"
+    atem_input: 2
+    pad_assign: 42 }
+  { mode: "audioOn"
+    atem_input: 3
+    pad_assign: 43 }
+  { mode: "audioOn"
+    atem_input: 4
+    pad_assign: 44 }
+
+  { mode: "preview"
+    atem_input: 5
+    pad_assign: 57 }
+  { mode: "preview"
+    atem_input: 6
+    pad_assign: 58 }
+  { mode: "preview"
+    atem_input: 7
+    pad_assign: 59 }
+  { mode: "preview"
+    atem_input: 8
+    pad_assign: 60 }
+
+  { mode: "preview"
+    atem_input: 1
+    pad_assign: 73 }
+  { mode: "preview"
+    atem_input: 2
+    pad_assign: 74 }
+  { mode: "preview"
+    atem_input: 3
+    pad_assign: 75 }
+  { mode: "preview"
+    atem_input: 4
+    pad_assign: 76 }
+
+  { mode: "preview"
+    atem_input: 5
+    pad_assign: 89 }
+  { mode: "preview"
+    atem_input: 6
+    pad_assign: 90 }
+  { mode: "preview"
+    atem_input: 7
+    pad_assign: 91 }
+  { mode: "preview"
+    atem_input: 8
+    pad_assign: 92 }
+
+  { mode: "auto"
+    pad_assign: 107}
+  { mode: "cut"
+    pad_assign: 108}
+]
