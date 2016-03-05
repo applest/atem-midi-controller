@@ -6,7 +6,7 @@ config = cson.load('./config.cson')
 input = new midi.input()
 output = new midi.output()
 switcher = new atem()
-switcher.connect('172.16.0.101')
+switcher.connect('172.16.0.100')
 
 MAX_CHANNEL = 8
 RED_COLOR   = 15
@@ -27,9 +27,14 @@ RECORD_BUTTON = 108
 input.openPort(0)
 output.openPort(0)
 
-switcher.on('stateChanged', (err, state) ->
-  # console.log(state)
+switcher.on('connect', ->
+  console.log('connect')
+)
+switcher.on('disconnect', ->
+  console.log('disconnect')
+)
 
+switcher.on('stateChanged', (err, state) ->
   for mapping in getPreviewMappings()
     if mapping.atemInput == state.video.previewInput
       output.sendMessage([ NOTE_ON_COMMAND, mapping.padAssign, GREEN_COLOR])
@@ -63,6 +68,13 @@ switcher.on('stateChanged', (err, state) ->
       output.sendMessage([ NOTE_ON_COMMAND, mapping.padAssign, RED_COLOR])
     else
       output.sendMessage([ NOTE_ON_COMMAND, mapping.padAssign, 0])
+
+  for mapping in getNextTransitionMappings()
+    if switcher.state.video.upstreamKeyNextState[mapping.number]
+      output.sendMessage([ NOTE_ON_COMMAND, mapping.padAssign, 127])
+    else
+      output.sendMessage([ NOTE_ON_COMMAND, mapping.padAssign, 0])
+
 )
 
 input.on('message', (deltaTime, message) ->
@@ -121,6 +133,10 @@ parseNoteOnCommand = (padAssign) ->
       switcher.cutTransition()
     when "audioOn"
       switcher.changeAudioChannelState(mapping.atemInput, !switcher.state.audio.channels[mapping.atemInput]?.on)
+    when "nextTransition"
+      switcher.changeUpstreamKeyNextState(mapping.number, !switcher.state.video.upstreamKeyNextState[mapping.number])
+    when "runMacro"
+      switcher.runMacro(mapping.number)
 
 # class MidiController
 getProgramMappings = -> config.buttons.filter( (b) -> b.mode is "program" )
@@ -129,6 +145,7 @@ getPreviewAndProgramMappings = -> config.buttons.filter( (b) -> b.mode is "previ
 getAutoMappings = -> config.buttons.filter( (b) -> b.mode is "auto" )
 getCutMappings = -> config.buttons.filter( (b) -> b.mode is "cut" )
 getAudioOnMappings = -> config.buttons.filter( (b) -> b.mode is "audioOn" )
+getNextTransitionMappings = -> config.buttons.filter( (b) -> b.mode is "nextTransition" )
 
 getKnobMapping = (padAssign) ->
   for mapping in config.knobs

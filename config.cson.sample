@@ -53,36 +53,37 @@ sliders: [
 ]
 
 buttons: [
-    mode: "program"
+    mode: "audioOn"
     atemInput: 1
     padAssign: 41
   ,
-    mode: "program"
+    mode: "audioOn"
     atemInput: 2
     padAssign: 42
   ,
-    mode: "program"
+    mode: "audioOn"
     atemInput: 3
     padAssign: 43
   ,
-    mode: "program"
+    mode: "audioOn"
     atemInput: 4
     padAssign: 44
   ,
-    mode: "runMacro"
-    number: 0
+
+    mode: "previewAndProgram"
+    atemInput: 1
     padAssign: 57
   ,
-    mode: "runMacro"
-    number: 1
+    mode: "previewAndProgram"
+    atemInput: 2
     padAssign: 58
   ,
-    mode: "runMacro"
-    number: 2
+    mode: "previewAndProgram"
+    atemInput: 3
     padAssign: 59
   ,
-    mode: "runMacro"
-    number: 3
+    mode: "previewAndProgram"
+    atemInput: 4
     padAssign: 60
   ,
 
@@ -103,14 +104,23 @@ buttons: [
     padAssign: 76
   ,
 
-    mode: "runMacro"
-    number: 0
-    padAssign: 105
+    mode: "program"
+    atemInput: 1
+    padAssign: 89
   ,
-    mode: "nextTransition"
-    number: 0
-    padAssign: 106
+    mode: "program"
+    atemInput: 2
+    padAssign: 90
   ,
+    mode: "program"
+    atemInput: 3
+    padAssign: 91
+  ,
+    mode: "program"
+    atemInput: 4
+    padAssign: 92
+  ,
+
     mode: "auto"
     padAssign: 107
   ,
