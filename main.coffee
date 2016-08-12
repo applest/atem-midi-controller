@@ -6,7 +6,7 @@ config = cson.load('./config.cson')
 input = new midi.input()
 output = new midi.output()
 switcher = new atem()
-switcher.connect('172.16.0.100')
+switcher.connect(config.atem.host)
 
 MAX_CHANNEL = 8
 RED_COLOR   = 15
