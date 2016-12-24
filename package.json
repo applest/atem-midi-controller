@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "applest-atem": "^0.1.8",
+    "applest-atem": "0.2.2",
     "cson": "^3.0.2",
     "midi": "^0.9.4"
   }
