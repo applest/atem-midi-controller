@@ -1,13 +1,13 @@
 atem:
-  host: "172.16.0.101"
+  host: "172.16.0.100"
 
 knobs: [
     mode: "audioPan"
     atemInput: 1
     padAssign: 49
   ,
-    mode: "audioPan"
-    atemInput: 2
+    mode: "cameraIris"
+    cameraInput: 1
     padAssign: 50
   ,
     mode: "audioPan"
@@ -20,8 +20,8 @@ knobs: [
 ]
 
 sliders: [
-    mode: "audioGain"
-    atemInput: 1
+    mode: "cameraIris"
+    cameraInput: 1
     padAssign: 77
   ,
     mode: "audioGain"
@@ -45,75 +45,99 @@ sliders: [
     atemInput: 1001
     padAssign: 82
   ,
-    mode: "audioMasterGain"
+    mode: "tbar"
     padAssign: 83
+    me: 0
   ,
     mode: "tbar"
     padAssign: 84
+    me: 1
 ]
 
 buttons: [
-    mode: "program"
-    atemInput: 1
+    mode: "aux"
+    atemInput: 6
+    auxNumber: 2
     padAssign: 41
   ,
-    mode: "program"
-    atemInput: 2
+    mode: "aux"
+    atemInput: 7
+    auxNumber: 2
     padAssign: 42
   ,
-    mode: "program"
-    atemInput: 3
+    mode: "aux"
+    atemInput: 8
+    auxNumber: 2
     padAssign: 43
   ,
-    mode: "program"
-    atemInput: 4
+    mode: "aux"
+    atemInput: 9
+    auxNumber: 2
     padAssign: 44
   ,
-    mode: "runMacro"
-    number: 0
+    mode: "aux"
+    atemInput: 10
+    auxNumber: 2
     padAssign: 57
   ,
-    mode: "runMacro"
-    number: 1
+    mode: "aux"
+    atemInput: 10010
+    auxNumber: 2
     padAssign: 58
-  ,
-    mode: "runMacro"
-    number: 2
-    padAssign: 59
-  ,
-    mode: "runMacro"
-    number: 3
-    padAssign: 60
-  ,
-
-    mode: "preview"
-    atemInput: 1
-    padAssign: 73
-  ,
-    mode: "preview"
-    atemInput: 2
-    padAssign: 74
-  ,
-    mode: "preview"
-    atemInput: 3
-    padAssign: 75
-  ,
-    mode: "preview"
-    atemInput: 4
-    padAssign: 76
-  ,
-
-    mode: "runMacro"
-    number: 0
-    padAssign: 105
-  ,
-    mode: "nextTransition"
-    number: 0
-    padAssign: 106
-  ,
-    mode: "auto"
-    padAssign: 107
-  ,
-    mode: "cut"
-    padAssign: 108
+  # ,
+  #   mode: "program"
+  #   atemInput: 3
+  #   padAssign: 59
+  # ,
+  #   mode: "program"
+  #   atemInput: 4
+  #   padAssign: 60
+  # ,
+  #
+  #   mode: "preview"
+  #   atemInput: 1
+  #   padAssign: 73
+  # ,
+  #   mode: "preview"
+  #   atemInput: 2
+  #   padAssign: 74
+  # ,
+  #   mode: "preview"
+  #   atemInput: 3
+  #   padAssign: 75
+  # ,
+  #   mode: "preview"
+  #   atemInput: 4
+  #   padAssign: 76
+  # ,
+  #   mode: "preview"
+  #   atemInput: 1
+  #   padAssign: 89
+  # ,
+  #   mode: "preview"
+  #   atemInput: 2
+  #   padAssign: 90
+  # ,
+  #   mode: "preview"
+  #   atemInput: 3
+  #   padAssign: 91
+  # ,
+  #   mode: "preview"
+  #   atemInput: 4
+  #   padAssign: 92
+  # ,
+  #
+  #   mode: "runMacro"
+  #   number: 0
+  #   padAssign: 105
+  # ,
+  #   mode: "nextTransition"
+  #   number: 0
+  #   padAssign: 106
+  # ,
+  #   mode: "auto"
+  #   padAssign: 107
+  # ,
+  #   mode: "cut"
+  #   padAssign: 108
 ]

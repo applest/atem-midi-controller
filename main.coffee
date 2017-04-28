@@ -60,6 +60,13 @@ switcher.on('stateChanged', (err, state) ->
     else
       output.sendMessage([ NOTE_ON_COMMAND, mapping.padAssign, 0])
 
+  for mapping in getAuxMapping()
+    auxNumber = mapping.auxNumber
+    if state.video.auxs[auxNumber] == mapping.atemInput
+      output.sendMessage([ NOTE_ON_COMMAND, mapping.padAssign, RED_COLOR])
+    else
+      output.sendMessage([ NOTE_ON_COMMAND, mapping.padAssign, 0])
+
   for mapping in getAutoMappings()
     me = mapping.me || 0
     if state.video.ME[me].transitionPosition != 0
@@ -134,6 +141,8 @@ parseNoteOnCommand = (padAssign) ->
       switcher.changePreviewInput(mapping.atemInput, mapping.me)
     when "previewAndProgram"
       switcher.changePreviewInput(mapping.atemInput, mapping.me)
+    when "aux"
+      switcher.changeAuxInput(mapping.auxNumber, mapping.atemInput)
     when "auto"
       switcher.autoTransition(mapping.me)
     when "cut"
@@ -149,6 +158,7 @@ parseNoteOnCommand = (padAssign) ->
 getProgramMappings = -> config.buttons.filter( (b) -> b.mode is "program" )
 getPreviewMappings = -> config.buttons.filter( (b) -> b.mode is "preview" )
 getPreviewAndProgramMappings = -> config.buttons.filter( (b) -> b.mode is "previewAndProgram" )
+getAuxMapping = -> config.buttons.filter( (b) -> b.mode is "aux" )
 getAutoMappings = -> config.buttons.filter( (b) -> b.mode is "auto" )
 getCutMappings = -> config.buttons.filter( (b) -> b.mode is "cut" )
 getAudioOnMappings = -> config.buttons.filter( (b) -> b.mode is "audioOn" )
